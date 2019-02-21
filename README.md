@@ -15,7 +15,7 @@ ENV RUN_TIME=300                 #需要测试的单任务执行时间，对应f
 
 ENV BLOCK_SIZE='4k 1024k'        #需要测试的block size，对应fio测试命令里的-bs取值，不同取值中间以空格隔开
 
-ENV TEST_METHOD='read write rx'  #需要测试的读写方式，对应fio测试命令里的-rw取值，不同取值中间以空格隔开
+ENV TEST_METHOD='read write rw'  #需要测试的读写方式，对应fio测试命令里的-rw取值，不同取值中间以空格隔开
 
 ENV READ_RATE=70                 #混合读写时的读比例，对应fio测试命令里的-rwmixread取值，不同取值中间以空格隔开
 
