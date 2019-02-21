@@ -6,12 +6,19 @@ This image will execute disk performance test tasks and generate report automati
 使用时需要把存储挂载到容器 /var/log/fio/results和/var/log/fio/reports路径
 
 可以设置的环境变量如下
+
 ENV TEST_FILE=/tmp/fiotest       #需要测试的磁盘路径，对应fio测试命令里的-filename取值
+
 ENV FILE_SIZE=5G                 #需要测试的文件大小，对应fio测试命令里的-size取值
+
 ENV RUN_TIME=300                 #需要测试的单任务执行时间，对应fio测试命令里的-runtime取值
+
 ENV BLOCK_SIZE='4k 1024k'        #需要测试的block size，对应fio测试命令里的-bs取值，不同取值中间以空格隔开
+
 ENV TEST_METHOD='read write rx'  #需要测试的读写方式，对应fio测试命令里的-rw取值，不同取值中间以空格隔开
+
 ENV READ_RATE=70                 #混合读写时的读比例，对应fio测试命令里的-rwmixread取值，不同取值中间以空格隔开
+
 ENV TEST_TIMES=3                 #测试的组数
 
 
