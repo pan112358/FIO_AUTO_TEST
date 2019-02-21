@@ -12,7 +12,7 @@ ENV TEST_METHOD='read write rx'
 ENV READ_RATE=70
 ENV TEST_TIMES=3
 
-RUN pip install --no-cache fio libaio-devel\
+RUN yum install -y fio libaio-devel\
   &&chmod 777 /opt/fio_autotest/start.sh
 
 ENTRYPOINT sh /opt/fio_autotest/start.sh
