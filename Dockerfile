@@ -4,7 +4,7 @@ MAINTAINER PeterPan
 
 COPY ./files /opt/fio_autotest/
 
-ENV TEST_FILE=/tmp
+ENV TEST_FILE=/tmp/fiotest
 ENV FILE_SIZE=5G
 ENV RUN_TIME=300
 ENV BLOCK_SIZE='4k 1024k'
