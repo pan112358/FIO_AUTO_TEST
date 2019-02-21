@@ -6,7 +6,7 @@ COPY ./files /opt/fio_autotest/
 
 ENV TEST_FILE=/tmp
 ENV FILE_SIZE=5G
-ENV RUN_TIME=399
+ENV RUN_TIME=300
 ENV BLOCK_SIZE='4k 1024k'
 ENV TEST_METHOD='read write rx'
 ENV READ_RATE=70
