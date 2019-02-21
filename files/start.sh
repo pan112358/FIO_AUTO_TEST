@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir /var/log/fio&&mkdir /var/log/fio/reports&&mkdir /var/log/fio/results
 #按顺序传入两个参数，读写方式，blocksize 
 for i in $1; do
   for j in $2; do
