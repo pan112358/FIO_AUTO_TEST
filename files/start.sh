@@ -19,9 +19,9 @@ done
 
 grep 'IOPS' /var/log/fio/results/*iops* |awk '{print $1,$2,$3}' | awk -F, '{print $1}'|awk -F: '{print $1,$2,$3}' |awk -F_iops_ '{print $1,"test_group"$2,$3}' | awk -F/var/log/fio/results/ '{print $2}' >/var/log/fio/reports/IOPS_Report.txt
 
-grep 'avg=' /var/log/fio_result/*delay* | grep ' lat ' | awk '{print $1,$2,$3,$6}' |awk -F_delay_ '{print $1,"test_group"$2}'|awk -F, '{print $1}' | awk -F/var/log/fio/results/ '{print $2}'|awk -F: '{print $1,$2,$3}' >/var/log/fio/reports/Delay_Report.txt
+grep 'avg=' /var/log/fio/results/*delay* | grep ' lat ' | awk '{print $1,$2,$3,$6}' |awk -F_delay_ '{print $1,"test_group"$2}'|awk -F, '{print $1}' | awk -F/var/log/fio/results/ '{print $2}'|awk -F: '{print $1,$2,$3}' >/var/log/fio/reports/Delay_Report.txt
 
-grep IOPS /var/log/fio_result/*_iops_* |awk -F: '{print $1,$2,$3}' |awk -F_iops_ '{print $1,"test_group"$2,$3}' | awk -F'(' '{print $1,$2}' | awk '{print $1,$2,$3,$6}' | awk -F')' '{print $1}'| awk -F/var/log/fio/results/ '{print $2}' >/var/log/fio/reports/BW_Report.txt
+grep IOPS /var/log/fio/results/*_iops_* |awk -F: '{print $1,$2,$3}' |awk -F_iops_ '{print $1,"test_group"$2,$3}' | awk -F'(' '{print $1,$2}' | awk '{print $1,$2,$3,$6}' | awk -F')' '{print $1}'| awk -F/var/log/fio/results/ '{print $2}' >/var/log/fio/reports/BW_Report.txt
 
 cd /var/log/fio/reports/
 
