@@ -15,5 +15,5 @@ ENV TEST_TIMES=3
 RUN pip install --no-cache fio libaio-devel\
   &&chmod 777 /opt/fio_autotest/start.sh
 
-Entrypoint ./opt/fio_autotest/start.sh
+EntryPoint ./opt/fio_autotest/start.sh
 
