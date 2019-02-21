@@ -24,4 +24,4 @@ grep IOPS /var/log/fio_result/*_iops_* |awk -F: '{print $1,$2,$3}' |awk -F_iops_
 
 cd /var/log/fio/reports/
 
-paste BW_Report.txt IOPS_Report.txt Delay_Report.txt |awk '{print $1,$2,$3,$4,$8,$11,$12,$13}' >Summary_Report.txt
+paste BW_Report.txt IOPS_Report.txt Delay_Report.txt |awk '{print $1,$2,$3,$4,$8,$11,$13,$12}' >Summary_Report.txt
