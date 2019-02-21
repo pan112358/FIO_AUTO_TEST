@@ -15,5 +15,5 @@ ENV TEST_TIMES=3
 RUN yum install -y fio libaio-devel\
   &&chmod 777 /opt/fio_autotest/start.sh
 
-ENTRYPOINT sh /opt/fio_autotest/start.sh "$TEST_METHOD" "$BLOCKSIZE"
+ENTRYPOINT sh /opt/fio_autotest/start.sh "$TEST_METHOD" "$BLOCK_SIZE"
 
