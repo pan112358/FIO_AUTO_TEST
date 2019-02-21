@@ -23,7 +23,7 @@ ENV TEST_TIMES=3                 #测试的组数
 
 测试时长取决传入参数，可以采用如下方法预估
 
-测试总时间=（BLOCK_SIZE类型数）*（ TEST_METHOD类型数 ）* （ 测试组数TEST_TIMES）*（单次测试执行时间RUN_TIME）
+测试总时间=（BLOCK_SIZE类型数） * （ TEST_METHOD类型数 ）  *  （ 测试组数TEST_TIMES） * （单次测试执行时间RUN_TIME）
 
 
 测试完成后，原始记录保存在 results目录
